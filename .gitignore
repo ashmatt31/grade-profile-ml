@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data — raw learner records should never live in version control.
+# This is a deliberate data governance decision: git history is
+# permanent and hard to fully purge, so sensitive data should
+# never enter it in the first place.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model output files — large binary files that don't diff meaningfully
+outputs/models/*.pkl
+outputs/models/*.joblib
+!outputs/models/.gitkeep
+
+# Conda
+.conda/
+
+# OS junk
+.DS_Store
+Thumbs.db
